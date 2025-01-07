@@ -10,3 +10,8 @@ spring:
       ddl-auto: update
     defer-datasource-initialization: true
     show-sql: true
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
