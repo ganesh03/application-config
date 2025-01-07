@@ -10,6 +10,8 @@ spring:
       ddl-auto: update
     defer-datasource-initialization: true
     show-sql: true
+  config:
+    import: classpath:eurekaServer.yml,redisServer.yml
 
 management:
   tracing:
