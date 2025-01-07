@@ -1,3 +1,12 @@
 spring:
   application:
     name: expense-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3333/expenses
+    username: root
+    password: p@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
