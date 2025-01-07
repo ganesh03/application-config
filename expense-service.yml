@@ -13,6 +13,9 @@ spring:
   config:
     import: classpath:eurekaServer.yml,redisServer.yml
 
+server:
+  port: 8004
+  
 management:
   tracing:
     sampling:
