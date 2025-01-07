@@ -1,1 +1,30 @@
+spring:
+  application:
+    name: expense-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3333/app_users
+    username: root
+    password: p@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
+  config:
+    import: classpath:eurekaServer.yml,redisServer.yml
+    
+  main:
+    banner-mode: false
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+server:
+  port: 8005
+
+app:
+  jwtSecret: 62f81ee96d23c56c5db911cd941729999c4815fb291a8fa32b687ebb1d44df75
+  jwtExpirationMs: 86400000
+  secretKey: "G@nesh9"
